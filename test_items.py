@@ -15,4 +15,4 @@ def test_button_is_on_page(browser):
     button = browser.find_element(By.CLASS_NAME, "btn-primary")
     print(button.text)  # вывожу название кнопки в терминал и не использую time.sleep()
 
-    assert type(button) == WebElement, 'Кнопки купить нет на странице'
+    assert type(button) == WebElement, "Кнопки купить нет на странице"
