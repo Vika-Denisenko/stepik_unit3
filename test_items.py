@@ -1,5 +1,3 @@
-import time
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 
@@ -14,9 +12,7 @@ link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
 def test_button_is_on_page(browser):
     browser.get(link)
-
-    button=browser.find_element(By.CLASS_NAME, "btn-primary")
-    print(button.text) # вывожу название кнопки в терминал и не использую time.sleep()
+    button = browser.find_element(By.CLASS_NAME, "btn-primary")
+    print(button.text)  # вывожу название кнопки в терминал и не использую time.sleep()
 
     assert type(button) == WebElement, 'Кнопки купить нет на странице'
-
